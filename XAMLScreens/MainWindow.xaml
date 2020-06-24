@@ -1,0 +1,48 @@
+﻿<CustomControl:CustomWindow x:Class="XAMLScreens.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        WindowState="Maximized"
+        xmlns:CustomControl="clr-namespace:XAMLScreens.CommonControls"
+        xmlns:local="clr-namespace:XAMLScreens"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+            <RowDefinition Height="42"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="65"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <RadioButton x:Name="btnHome" GroupName="Leftbtn" Style="{StaticResource HomeButtonStyle}" Tag="/Icons/home.png" Click="BtnHome_Click"/>
+        <Grid Grid.Column="1" Background="{StaticResource skybluecolor}">
+            <Grid Margin="65,0">
+                <TextBlock x:Name="textHeader" Text="INCIO" Style="{StaticResource TitileTextStyle}"/>
+                <Button x:Name="notificationbtn" HorizontalAlignment="Right" Style="{StaticResource NotificationButtonStyle}" Tag="/Icons/notification.png" />
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1" Background="{StaticResource LeftMenuBackground}">
+            <StackPanel>
+                <RadioButton x:Name="btnLista" GroupName="Leftbtn" Style="{StaticResource LeftButtonStyle}" Tag="/Icons/audit.png" Click="BtnLista_Click"/>
+                <RadioButton GroupName="Leftbtn" Style="{StaticResource LeftButtonStyle}" Tag="/Icons/Pedidosleft.png" Click="BtnLista_Click"/>
+            </StackPanel>
+            <RadioButton x:Name="btnConfig" GroupName="Leftbtn" Style="{StaticResource LeftButtonStyle}" Tag="/Icons/settings.png" VerticalAlignment="Bottom" Click="BtnConfig_Click"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1" Background="{StaticResource MainscreenBackground}">
+            <ContentPresenter x:Name="maincontent"/>
+        </Grid>
+        <Grid Grid.Row="2" Grid.ColumnSpan="2" Background="{StaticResource Footercolor}">
+            <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0" Orientation="Horizontal">
+                <TextBlock Text="Fecha:" Style="{StaticResource FooterTextStyle}"/>
+                <TextBlock Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat=dd/MM/yyyy}" Margin="5,0,0,0" Style="{StaticResource FooterTextStyle}"/>
+                <TextBlock Text="Hora:" Margin="10,0,0,0" Style="{StaticResource FooterTextStyle}"/>
+                <TextBlock Text="{Binding Source={x:Static sys:DateTime.Now},StringFormat='{}{0:hh:mm}'}" Margin="5,0,0,0" Style="{StaticResource FooterTextStyle}"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</CustomControl:CustomWindow>

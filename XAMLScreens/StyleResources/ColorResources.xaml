@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:XAMLScreens.StyleResources">
+    <SolidColorBrush x:Key="WindowTitlebarColor" Color="#00a0dc"/>
+    <SolidColorBrush x:Key="skybluecolor" Color="#03b0f2"/>
+    <SolidColorBrush x:Key="btnHomeSelectcolor" Color="#0086bb"/>
+    <SolidColorBrush x:Key="MainscreenBackground" Color="#f2f2f2"/>
+    <SolidColorBrush x:Key="Whitecolor" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Footercolor" Color="#e6e6e6"/>
+    <SolidColorBrush x:Key="FooterForeground" Color="#3c3c3c"/>
+    <SolidColorBrush x:Key="LeftMenuBackground" Color="#d9d9d9"/>
+    <SolidColorBrush x:Key="CircleGreenColor" Color="#02ad51"/>
+    <SolidColorBrush x:Key="CircleRedColor" Color="#ff0101"/>
+    <SolidColorBrush x:Key="DgRedColor" Color="#d04936"/>
+    <SolidColorBrush x:Key="DgGreenColor" Color="Green"/>
+    <SolidColorBrush x:Key="DgYellowColor" Color="Yellow"/>
+    
+</ResourceDictionary>

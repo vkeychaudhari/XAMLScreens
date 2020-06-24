@@ -1,0 +1,18 @@
+﻿<Application x:Class="XAMLScreens.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:XAMLScreens"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/XAMLScreens;component/StyleResources/ColorResources.xaml"/>
+                <ResourceDictionary Source="/XAMLScreens;component/StyleResources/StyleResource.xaml"/>
+                <ResourceDictionary Source="/XAMLScreens;component/StyleResources/TextblockStyleResources.xaml"/>
+                <ResourceDictionary Source="/XAMLScreens;component/StyleResources/ButtonStyleResources.xaml"/>
+                <ResourceDictionary Source="/XAMLScreens;component/StyleResources/DatagridStyleResources.xaml"/>
+                <ResourceDictionary Source="/XAMLScreens;component/StyleResources/ComboboxStyleResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
